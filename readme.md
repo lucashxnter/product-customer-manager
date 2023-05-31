@@ -6,16 +6,21 @@ Este é um sistema de gerenciamento de produtos e clientes desenvolvido em JavaS
 
 O sistema possui as seguintes funcionalidades:
 
+### Produtos
+
 - Criar um novo produto, fornecendo o nome, valor e estoque.
 - Visualizar todos os produtos cadastrados.
 - Atualizar as informações de um produto existente, como valor e estoque.
 - Excluir um produto existente.
+- Verificar a disponibilidade de um produto no estoque.
+
+### Clientes
+
 - Criar um novo cliente, fornecendo o nome, saldo e lista de produtos.
 - Visualizar todos os clientes cadastrados.
 - Atualizar o saldo de um cliente existente.
 - Adicionar saldo ao saldo atual de um cliente.
 - Excluir um cliente existente.
-- Verificar a disponibilidade de um produto no estoque.
 - Comprar um produto, atualizando o saldo do cliente e o estoque do produto.
 
 ## Uso
@@ -26,6 +31,7 @@ O código fornece duas principais funcionalidades, que estão divididas em módu
 
 Para utilizar as funcionalidades relacionadas a produtos, utilize o objeto `produtosModule`. Exemplo de uso:
 
+```javascript
 // Criar um novo produto
 produtosModule.criaProduto('Teclado', 250, 10);
 
@@ -37,11 +43,13 @@ produtosModule.atualizaProduto('Teclado', 300, 5);
 
 // Excluir um produto existente
 produtosModule.excluiProduto('Teclado');
+```
 
-### CLIENTES 
+### Clientes
 
-Para utilizar as funcionalidades relacionadas a clientes, utilize o objeto clientesModule. Exemplo de uso:
+Para utilizar as funcionalidades relacionadas a clientes, utilize o objeto `clientesModule`. Exemplo de uso:
 
+```javascript
 // Criar um novo cliente
 clientesModule.criaCliente('Kelwin', 1500, []);
 
@@ -56,3 +64,6 @@ clientesModule.adicionarSaldoAoCliente('Kelwin', 500);
 
 // Excluir um cliente existente
 clientesModule.excluiCliente('Kelwin');
+```
+
+Lembre-se de ajustar os parâmetros de acordo com as informações desejadas para criar ou atualizar produtos e clientes.
